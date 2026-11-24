@@ -4,7 +4,7 @@ services:
     container_name: miniflux
     restart: always
     ports:
-      - "80:3500"
+      - "3500:8080"
     depends_on:
       miniflux-db:
         condition: service_healthy
