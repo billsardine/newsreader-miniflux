@@ -9,7 +9,7 @@ services:
       miniflux-db:
         condition: service_healthy
     environment:
-      DATABASE_URL: postgres://miniflux:secret@miniflux-db/miniflux?sslmode=disable
+      DATABASE_URL: postgres://miniflux:${POSTGRES_PASSWORD}@miniflux-db/miniflux?sslmode=disable
       RUN_MIGRATIONS: 1
       CREATE_ADMIN: 1
       ADMIN_USERNAME: ${ADMIN_USERNAME}
